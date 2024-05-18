@@ -183,11 +183,10 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer sumUpToLimit(Integer intLimit) {
         Integer sum = 0;
-        for (Integer a = 0; a < intLimit; a++) {
+        for (Integer a = 1; a <= intLimit; a++) {
             sum += a;
         } return sum;
 
-        
     }
 
     /**
@@ -454,12 +453,16 @@ public with sharing class FlowControlLoopsCollections {
         employeeSalaries.put('Alice Johnson', 65000);        
         
         // Iterate over the Map using a for loop
-        for (Integer salary : employeeSalaries.values()) {
+        for (String employee : employeeSalaries.keySet()) {
+             Integer salary = employeeSalaries.get(employee);
             // Check if the salary of the employee is more than 55000
             if (salary > 55000) {
-            // Add the employee to the list of high paid employees
-            highPaidEmployees.add();
+             // Add the employee to the list of high paid employees
+             highPaidEmployees.add(employee);
             }
+            
+            
+           
         }
             // Return the list of high paid employees
             return highPaidEmployees; // Replace null with the variable you used to store the result     
